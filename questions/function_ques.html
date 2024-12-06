@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="changeText">Click me</button>
+    <p id="demo">This is some text.</p>
+
+
+
+
+    <script>
+
+        // How do you create a JavaScript function to change the text of an HTML element on a website?
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text has been changed!";
+        }
+        document.getElementById("changeText").addEventListener("click", changeText);
+
+
+        // Explain how to pass parameters to a JavaScript function and provide an example.
+        function greet(name) {
+            alert("Hello, " + name + "!");
+        }
+
+        document.getElementById("greetButton").addEventListener("click", function () {
+            var userName = prompt("Enter your name:");
+            greet(userName);
+        });
+
+
+        // How can you create an anonymous (nameless) function in JavaScript?
+
+        var multiply = function (a, b) {
+            return a * b;
+        };
+
+        var result = multiply(4, 7); // result will be 28
+    </script>
+</body>
+
+</html>

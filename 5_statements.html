@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // There are the different type of statement in js
+        /*
+        1. if statements
+        2. else statements
+        3. if else statements
+        4. if else if statements
+        5. nesting if statements
+        6. ternary 
+        7. switch statement
+        */
+
+        // example of if statement 
+        var x = 34;
+        if (x > 18) {
+            document.write("You are Adult<br>");
+        }
+
+        // using logical operators in if && both condition must true
+        var age = 18;
+        if (age >= 18 && age < 50) {
+            document.write("You are eligible for work<br>");
+        }
+        // using logical operators in if || one condition must true
+        var age = 8;
+        if (age >= 18 || age < 50) {
+            document.write("You are eligible for work<br> ");
+        }
+        // using logical operators in if ! return reverse result
+        var age = 9;
+        if (!age > 18) {
+            document.write("You are eligible  work<br> ");
+        }
+
+
+        // Using If else statements 
+        var resident = "france";
+        if (resident == "indian") {
+            document.write("You are live in India  <br>");
+        } else {
+            document.write("You are Not Live in India  <br>");
+        }
+        // using if else if statement
+
+        var time = 19;
+        if (time < 12) {
+            document.write("Good Morning EveryOne ! <br>");
+        } else if (time > 12 && time < 18) {
+            document.write("Good Afternoon  <br>");
+        } else {
+            document.write("Good Night  <br>");
+        }
+
+        // using ternary
+        var age = 8;
+        (age > 18) ? document.write("You are adult <br>") : document.write("You are not adult <br>");
+
+        // using switch statements
+        var day = 3;
+        switch (day) {
+            case 1:
+                document.write("Monday <br>" + "<br>");
+                break;
+            case 2:
+                document.write("Tuesday <br>" + "<br>");
+                break;
+
+            default:
+                document.write("You enter wrong day" + "<br>")
+                break;
+        }
+
+
+
+        /*
+        Practice related questions
+        Q1. Write a JavaScript program that displays the largest integer among two integers.
+          */
+        var num1 = 67;
+        var num2 = 76;
+        if (num2 > num1) {
+            document.write(num2 + "<br>");
+        } else {
+            document.write(num1 + "<br>");
+        }
+        // Q2. JavaScript conditional statement to find the sign of product of three numbers
+
+
+
+
+
+
+        var num1 = -7;
+        var num2 = +9;
+        var num3 = +8;
+        if (num1 > 0 && num2 > 0 && num3 > 0) {
+            document.write("+" + "<br>");
+        } else if (num1 < 0 && num2 > 0 && num3 > 0) {
+            document.write("-" + "<br>");
+        }
+        else if (num1 > 0 && num2 < 0 && num3 > 0) {
+            document.write("-" + "<br>");
+        } else if (num1 > 0 && num2 > 0 && num3 < 0) {
+            document.write("-" + "<br>");
+        }
+        else if (num1 < 0 && num2 < 0 && num3 > 0) {
+            document.write("+" + "<br>");
+        } else if (num1 < 0 && num2 > 0 && num3 < 0) {
+            document.write("+" + "<br>");
+        } else if (num1 < 0 && num2 > 0 && num3 < 0) {
+            document.write("+" + "<br>");
+        } else if (num1 > 0 && num2 < 0 && num3 < 0) {
+            document.write("+" + "<br>");
+        } else {
+            document.write("-" + "<br>");
+        }
+        //Q3 Write a JavaScript program that computes the average marks of the following students. Then, this average is used to determine the corresponding grade.
+        /* Name	Marks
+        David	 80
+        Vinoth	 77
+        Divya	 88
+        Ishitha	 95
+        Thomas	 68 
+   */
+        var avg = (80 + 77 + 88 + 95 + 68) / 5;
+        document.write("The Average Marks of Student is: ", avg + "<br>");
+
+        // Q4 Write the js program to find the sum of two number when the number is only even number
+
+
+
+
+
+
+
+
+        var PosNum1 = 6;
+        var PosNum2 = 2;
+        var sum = PosNum1 + PosNum2;
+        if (PosNum1 % 2 == 0 && PosNum2 % 2 == 0) {
+            document.write("The Sum of two even number: ", sum + "<br>");
+        } else {
+            document.write("Your number is not even");
+        }
+
+        // // find the factorial
+
+        // const num = prompt("Enter a number to find the factorial: ");
+
+        // if(num<0){
+        //     document.write(num +" is not positive number!");
+        // }else if(num == 0){
+        //     document.write("factorial of "+num+"is: 1", );
+        // }
+
+
+        //=====================================================
+        var lang = 'php';
+        switch(lang){
+            case 'HTML':
+            case 'Javascript':
+            case 'css':
+            case 'Bootstrap':
+                document.write("frontend");
+                break;
+            case 'php':
+            case 'java':
+            case 'python':
+            case 'ruby':
+            document.write("backend");
+        }
+    </script>
+</body>
+
+</html>

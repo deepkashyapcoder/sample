@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Question 1: Create a JavaScript program to display a list of products on an e-commerce website using a for loop. -->
+    <ul id="product-list"></ul>
+    <script>
+        const products = ["Product 1", "Product 2", "Product 3"];
+        const productList = document.getElementById("product-list");
+        for (let i = 0; i < products.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = products[i];
+            productList.appendChild(listItem);
+        }
+    </script>
+
+    <!-- Question 2: Implement a JavaScript script to cycle through a set of images in a slideshow on a website using a for loop. -->
+    <img id="slideshow" src="image1.jpg">
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+        const slideshow = document.getElementById("slideshow");
+        let currentIndex = 0;
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            slideshow.src = images[currentIndex];
+        }
+        setInterval(nextImage, 3000); // Change image every 3 seconds
+    </script>
+
+    <!-- Question 3: Create a JavaScript program to generate a navigation menu dynamically from an array of links using a for...of loop. -->
+
+    <ul id="menu"></ul>
+    <script>
+        const links = ["Home", "About", "Products", "Contact"];
+        const menu = document.getElementById("menu");
+        for (const link of links) {
+            const listItem = document.createElement("li");
+            const anchor = document.createElement("a");
+            anchor.textContent = link;
+            listItem.appendChild(anchor);
+            menu.appendChild(listItem);
+        }
+    </script>
+
+    <!-- Question 4: Build a JavaScript function to validate user input in a web form by checking for required fields using a for loop. -->
+
+    <form id="user-form">
+        <input type="text" id="name" required>
+        <input type="email" id="email" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById("user-form");
+        form.addEventListener("submit", function (event) {
+            const requiredFields = form.querySelectorAll("[required]");
+            for (const field of requiredFields) {
+                if (!field.value) {
+                    alert("Please fill in all required fields.");
+                    event.preventDefault();
+                    return;
+                }
+            }
+        });
+    </script>
+
+    <!-- Question 5: Create a JavaScript program to display the latest blog posts on a website using a for loop. -->
+
+    <ul id="blog-posts"></ul>
+    <script>
+        const blogData = [
+            { title: "Post 1", date: "2023-01-15" },
+            { title: "Post 2", date: "2023-02-20" },
+            { title: "Post 3", date: "2023-03-10" }
+        ];
+        const blogPosts = document.getElementById("blog-posts");
+        for (let i = 0; i < blogData.length; i++) {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${blogData[i].title} - ${blogData[i].date}`;
+            blogPosts.appendChild(listItem);
+        }
+    </script>
+
+    <!-- Question 6: Implement a JavaScript function to dynamically load content from an API and display it on a website using a for loop. -->
+
+    <div id="content"></div>
+    <script>
+        const apiData = ["Item 1", "Item 2", "Item 3"];
+        const contentDiv = document.getElementById("content");
+        for (let i = 0; i < apiData.length; i++) {
+            const item = document.createElement("div");
+            item.textContent = apiData[i];
+            contentDiv.appendChild(item);
+        }
+    </script>
+
+
+    <!-- Question 7: Create a JavaScript program to implement a tabbed interface on a website using a for loop. -->
+
+    <div class="tabs">
+        <button class="tab">Tab 1</button>
+        <button class="tab">Tab 2</button>
+        <button class="tab">Tab 3</button>
+    </div>
+    <div class="tab-content"></div>
+    <script>
+        const tabs = document.querySelectorAll(".tab");
+        const tabContent = document.querySelector(".tab-content");
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener("click", function () {
+                tabContent.textContent = `Content for Tab ${i + 1}`;
+            });
+        }
+    </script>
+
+    <!-- Question 8: Build a JavaScript program to create a dropdown menu dynamically from a list of options using a for...of loop. -->
+
+    <select id="dropdown"></select>
+    <script>
+        const options = ["Option 1", "Option 2", "Option 3"];
+        const dropdown = document.getElementById("dropdown");
+        for (const option of options) {
+            const dropdownOption = document.createElement("option");
+            dropdownOption.value = option;
+            dropdownOption.textContent = option;
+            dropdown.appendChild(dropdownOption);
+        }
+    </script>
+
+
+    <!-- Question 9: Develop a JavaScript program that animates elements on a web page using a for loop for frame updates. -->
+
+    <div id="animation-element"></div>
+    <script>
+        const element = document.getElementById("animation-element");
+        let leftPosition = 0;
+        function animate() {
+            leftPosition += 1;
+            element.style.left = leftPosition + "px";
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+
+    <!-- Question 10: Create a JavaScript program to filter and display items from a list based on user input using a for...of loop. -->
+
+    <input type="text" id="filter-input" placeholder="Filter items">
+    <ul id="item-list"></ul>
+    <script>
+        const items = ["Item 1", "Item 2", "Item 3", "Another Item"];
+        const filterInput = document.getElementById("filter-input");
+        const itemList = document.getElementById("item-list");
+
+        filterInput.addEventListener("input", function () {
+            const filterValue = filterInput.value.toLowerCase();
+            itemList.innerHTML = ""; // Clear the list
+            for (const item of items) {
+                if (item.toLowerCase().includes(filterValue)) {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = item;
+                    itemList.appendChild(listItem);
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

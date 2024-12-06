@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedkey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container border mt-5">
+        <div class="row">
+            <div class="col-lg-12 bg-danger text-white ">
+                <h2 id="header">Header</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 bg-info text-white">
+                <h2>Navigation</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8" id="content" width="" height="">
+                <h3 id="content1">content</h3>
+                <a href="" id="anc">Hello</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nesciunt quisquam alias, totam, eum
+                    at molestias adipisci nulla atque vero fugiat ullam ut beatae recusandae quidem fuga pariatur,
+                    deserunt porro. Adipisci autem neque cupiditate omnis nisi blanditiis voluptates fugiat architecto
+                    quibusdam animi, inventore alias tempore voluptatum ab aspernatur, ea facere?</p>
+                <ul>
+                    <li><a id="myAnchor">Home</a></li>
+                    <li>about Us</li>
+                    <li>contact Us</li>
+                    <li>services</li>
+                </ul>
+
+                <form id="myform" action="" method="get" enctype="multipart/form-data"
+                    class="form-control w-50 mx-auto">
+                    <label for="">Name</label>
+                    <input type="text">
+                </form>
+            </div>
+            <div class="col-lg-4 bg-danger text-white">
+                <ul class="list">
+                    <li>Home</li>
+                    <li>about Us</li>
+                    <li>contact Us</li>
+                    <li>services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 bg-danger text-white">
+                <h3>Footer</h3>
+            </div>
+        </div>
+    </div>
+    <p id="demo" onclick=""></p>
+    <script>
+
+        // DOM targeting methods
+        /*
+    
+        1. document.getElementById
+        2. document.getElementsByClassName
+        3. document.getElementsByTagName
+        4. document
+        5. document.all
+        6. document.documentElement
+        7. document.head
+        8. document.title
+        9. document.body
+        10. document.images
+        11. document.anchors
+        12. document.links
+        13. document.forms
+        14. document.doctype
+        15. document.URL
+        16. document.baseURI
+        17. document.domain
+        */
+
+
+        var element = document.getElementById("header");
+        console.log(element);
+        var element = document.getElementsByClassName("row");
+        console.log(element);
+        var element = document.getElementsByTagName("p");
+        console.log(element);
+        // var element = document;
+        console.log(element);
+        var element = document.all;
+        console.log(element);
+
+        var element = document.head;
+        console.log(element);
+
+
+
+
+
+
+
+
+        // var element = document.getElementById("header");
+        // console.log(element);
+
+        // var element = document.getElementsByClassName("list");
+        // console.log(element);
+
+        // console.log(document.link);
+
+
+        //========================================================================
+        //DOM Get methods
+        /*
+        1. innerText
+        2. innerHTML
+        3. getAttributes
+        4. getAttributeNode
+     
+        */
+
+        var element = document.getElementById("content").innerText;
+        var element = document.getElementById("content").innerHTML;
+        // var element = document.getElementById("content").getAttribute("id");
+        var element = document.getElementById("content").getAttributeNode("id");
+        var element = document.getElementById("content").getAttributeNames();
+        console.log(element);
+
+        //     var element = document.getElementById("myform").getAttributeNode("enctype");
+        //    console.log(element);
+
+
+
+
+        //=====================================================================
+        /*
+        DOM set Method
+        1. innerText
+        2. innerHTML
+        3. SetAttribute
+        4. removeAttribute
+        */
+
+
+
+
+        var element = document.getElementById("demo").innerText = "<h1>Hello</h1>";
+        var element = document.getElementById("demo").innerHTML = "<h1>Hello</h1>";
+        var element = document.getElementById("anc").setAttribute('href', "https://facebook.com");
+        var element = document.getElementById("anc").removeAttribute('href', "https://facebook.com");
+
+        // var element = document.getElementById("header").innerText ="Top Header";
+        // var element = document.getElementById("content").innerHTML ="<h4>Top Header</h4>";
+        //     var element = document.getElementById("myAnchor").setAttribute("href", "https://google.com");
+        //     var element = document.getElementById("myAnchor").removeAttribute("href", "https://google.com");
+        //    console.log(element);
+
+
+    </script>
+
+
+</body>
+
+</html>

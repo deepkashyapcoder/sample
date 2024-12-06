@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="test">
+
+
+   
+    <p id="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio repudiandae adipisci odio vero dolore rem? Et
+        porro perspiciatis numquam, iusto quaerat dignissimos blanditiis quae? Sunt minima doloribus doloremque ducimus
+        natus minus sit corporis quisquam est temporibus voluptatem atque laboriosam possimus, quo non provident vel
+        porro. Laboriosam obcaecati repellendus eius officiis!</p>
+    </div>
+
+    <script>
+        var heading = document.createElement("h2");
+        //    console.log(a);
+
+
+        var text = document.createTextNode("Welcome to our text node");
+        //    console.log(a);
+
+        //    var a  =  document.createComment("This is mmy comment");
+        //    console.log(a);
+
+
+        //=============================================================
+        // DOM append method
+        // 1. appendChild
+        // 2. insertBefore
+
+        heading.appendChild(text);
+        // document.body.appendChild(heading);
+
+        var target = document.getElementById("test");
+
+
+        target.insertBefore(heading, target.childNodes[0]);
+
+        
+    </script>
+</body>
+
+</html>

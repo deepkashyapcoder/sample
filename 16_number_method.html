@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*number method in js
+        1. number()
+        2. praseInt()
+        3. praseFloat()
+        4. isFinite()
+        5. isInteger()
+        6. toFixed
+        7.toprecision
+        */
+
+        // number()
+        var a = "9.9";
+        var num = Number(a);
+        document.write(typeof (num) + "<br>");
+
+        // praseInt
+        var num = parseInt(a);
+        document.write(typeof (num) + "<br>");
+
+        // praseFloat()
+        var a = 9.9;
+        var num = parseFloat("9.9");
+        document.write(typeof(num) + "<br>");
+
+        // isFinite()
+        var num = isFinite(9 + 0);
+        document.write(num + "<br>");
+
+        // isInteger()
+        var a = 100;
+        var num = Number.isInteger(a);
+        document.write(num + "<br>");
+
+        // toFixed()
+        var num = 5.56789;
+        var n = num.toFixed()
+        document.write(n + "<br>");
+
+         // toPrecision()
+         var num = 5.56789;
+        var n = num.toPrecision(2)
+        document.write(n + "<br>");
+    </script>
+</body>
+
+</html>

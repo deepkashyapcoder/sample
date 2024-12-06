@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var a = [10, 20, 30, 40];
+        // document.write(a[3] + "<br>");
+        // for (var i = 0; i < 4; i++) {
+        //     document.write(a[i] + "<br>");
+        // }
+
+        // how to take input from user and print the value on screen
+        var a = [10, 20, 30, 40];
+        // for (var b = 0; b < 4; b++) {
+        //     a[b] = prompt('enter a value');
+        // }
+        // for (var i = 0; i < 4; i++) {
+        //     document.write(a[i] + "<br>");
+        // }
+
+        // multidimensional array
+        var ary = [
+            ['harry', '18', 'male', 'b.com'],
+            ['deepanshu', '18', 'male', 'bca'],
+            ['shubham', '19', 'male', 'ba'],
+            ['kapil', '20', 'male', 'b.tech'],
+        ]
+        document.write("<table border='1px'");
+        for (var a = 0; a < 4; a++) {
+            document.write('<tr>');
+            for (var b = 0; b < 4; b++) {
+                document.write('<td>');
+                document.write(ary[a][b]);
+                document.write('</td>');
+            }
+            document.write('<tr>');
+            document.write("<br>");
+        }
+        document.write("</table>");
+        // modify an array
+        var a = ['harry', 18, 'bca'];
+        a[1] = 19;
+        print_r(a);
+
+
+
+    </script>
+</body>
+
+</html>

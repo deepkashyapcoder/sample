@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var a = {
+            firstName: "Ram",
+            lastName: "kumar",
+            age: 18,
+            country: "India"
+        }
+
+
+        // document.write(a);
+        console.log(a);
+        // console.log(a.firstName)
+        // document.write(a.firstName)
+
+
+
+        var a = {
+            salary: function () {
+                return 25000;
+            }
+        }
+
+
+        // document.write(a.salary());
+
+        var a = {
+            living: {
+                "city": "Delhi",
+                "country": "India",
+            }
+        }
+
+        document.write(a.living.city);
+        document.write(a.living.country);
+
+        // Method II
+
+        var a = new Object();
+        a.firstName = "Deepanshu";
+        a.lastName = "Kashyap";
+        a.age = 19;
+        a.profession = "Full stack development";
+        document.write(a.firstName);
+
+        //add and subtractx 
+
+
+        const calculator = {
+            add: function (a, b) {
+                return a + b;
+            },
+            subtract: function (a, b) {
+                return a - b;
+            }
+        };
+
+        const sum = calculator.add(5, 3);
+    </script>
+
+</body>
+
+</html>

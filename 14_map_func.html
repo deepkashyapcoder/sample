@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <button onclick="text1()">Click Here</button> -->
+
+    <script>
+        // var ary = [11, 4, 9, 16];
+
+        // var b = ary.map(text);
+        // document.write(b);
+        // function text(x) {
+        //     return x * 10
+        // }
+
+
+
+        //=================================
+        var ary = [
+            { fname: "Deepanshu", lname: "Kashyap" },
+            { fname: "shubaham", lname: "Kashyap" },
+            { fname: "karan", lname: "sharma" },
+            { fname: "hardik", lname: "pandya" }
+        ]
+
+        var b = ary.map(text);
+        document.write(b);
+        function text(x) {
+            return x.fname + " " + x.lname + "<br>";
+        }
+
+
+        //=======QUESTIONS========
+        // Question 1
+        const numbers = [1, 2, 3, 4, 5];
+        const doubled = numbers.map((num) => num * 2);
+
+        // Question 2
+        //: Provide an example of using the map function to render a list of user comments on a blog post.
+        var comments = [
+            { id: 1, text: 'Comment 1' },
+            { id: 2, text: 'Comment 2' },
+            // ...
+        ];
+        var commentElements = comments.map(comment_text);
+        document.write(commentElements);
+        function comment_text(x) {
+            return x.text + "<br>";
+        }
+
+
+        // question 3
+        //In a real website scenario, explain how you might use the map function to create a list of clickable items that perform actions when clicked.
+        var items = [
+            { id: 1, text: 'Item 1' },
+            { id: 2, text: 'Item 2' },
+            // ...
+        ];
+        var itemElements = items.map(text1);
+        document.write(itemElements);
+
+        
+        function text1(x) {
+            return x.text + "<br>";
+
+        }
+
+    </script>
+</body>
+
+</html>

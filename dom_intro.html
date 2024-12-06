@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container border mt-5">
+        <div class="row">
+            <div class="col-lg-12  text-white " id="header">
+                <h2>Header</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 bg-info text-white">
+                <h2>Navigation</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8" id="content">
+                <h3>content</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nesciunt quisquam alias, totam, eum
+                    at molestias adipisci nulla atque vero fugiat ullam ut beatae recusandae quidem fuga pariatur,
+                    deserunt porro. Adipisci autem neque cupiditate omnis nisi blanditiis voluptates fugiat architecto
+                    quibusdam animi, inventore alias tempore voluptatum ab aspernatur, ea facere?</p>
+                <ul>
+                    <li><a id="myAnchor">Home</a></li>
+                    <li>about Us</li>
+                    <li>contact Us</li>
+                    <li>services</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 bg-danger text-white">
+                <ul>
+                    <li>Home</li>
+                    <li>about Us</li>
+                    <li>contact Us</li>
+                    <li>services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 bg-danger text-white">
+                <h3>Footer</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        // DOM targeting methods
+        /*
+    
+        1. document.getElementById
+        2. document.getElementsByClassName
+        3. document.getElementsByTagName
+        4. document
+        5. document.all
+        6. document.documentElement
+        7. document.head
+        8. document.title
+        9. document.body
+        10. document.images
+        11. document.anchors
+        12. document.links
+        13. document.forms
+        14. document.doctype
+        15. document.URL
+        16. document.baseURI
+        17. document.domain
+        */
+
+        //document
+        var element;
+        element = document;
+        console.log(element);// return all elements in documents are hidden
+
+        // document.all
+        console.log(document.all);
+
+        //document.documentElement
+        console.log(document.documentElement);
+
+        //document.head
+        console.log(document.head);
+
+        // document.title
+        console.log(document.title);
+
+        //document.body
+        console.log(document.body);
+
+        //========================================================================
+        //DOM Get methods
+        /*
+        1. innerText
+        2. innerHTML
+        3. getAttributes
+        4. getAttributeNode
+        5. Attribute
+        */
+        //innerText
+        // var element;
+        //   element = document.getElementsByClassName('header').innerText;
+        //   console.log(element);
+
+
+        // element = document.getElementById('content').innerHTML;
+        // console.log(element);
+
+        // element = document.getElementById('content').getAttribute('class');
+        // console.log(element);
+
+        // element = document.getElementById('content').attributes;
+        // console.log(element);
+
+        //=====================================================================
+        /*
+        DOM set Method
+        1. innerText
+        2. innerHTML
+        3. SetAttribute
+        4. Attribute
+        5. removeAttribute
+        */
+
+        var element;
+        element = document.getElementById('header').innerHTML = '<h1>Deepanshu</h1>';
+
+         document.getElementById('header').innerText = 'wow';
+        // is_readable
+        document.getElementById("myAnchor").setAttribute("href", "https://www.google.com");
+        document.getElementById("myAnchor").removeAttribute("href", "https://www.google.com");
+
+        // ================================
+        // DOM queryselector and queryselectorall
+        // style method
+        document.querySelector("#header").style.backgroundColor = "purple";
+
+        // className
+        // document.querySelector("#header").className = "bg-danger text-primary";
+        // classList
+        document.querySelector("#header").classList.add("bg-danger");
+        document.querySelector("#header").classList.remove("bg-danger");
+
+    </script>
+</body>
+
+</html>
